@@ -3431,10 +3431,10 @@ function! s:IsValidFile(fname, ftype) abort
     endif
 
     let winnr = bufwinnr(a:fname)
-    if winnr != -1 && getwinvar(winnr, '&diff')
-        call tagbar#debug#log('Window is in diff mode')
-        return 0
-    endif
+    " if winnr != -1 && getwinvar(winnr, '&diff')
+    "     call tagbar#debug#log('Window is in diff mode')
+    "     return 0
+    " endif
 
     if &previewwindow
         call tagbar#debug#log('In preview window')
